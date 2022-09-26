@@ -50,6 +50,11 @@ function game() {
     let computerScore = 0;
 
     while (wantToPlay) {
+
+        /********************** */
+        /*play 5 rounds of game */
+        /********************** */
+        
         for (roundNumber; roundNumber <= 5; roundNumber++) {
             const computerSelection = getComputerChoice();
             const playerSelection = prompt("Please choose: Rock, Paper, Scissors");
@@ -69,6 +74,11 @@ function game() {
             console.log(`Player score: ${playerScore}\nComputer score: ${computerScore}`); // print player and computer scores
         }
 
+
+        /************************************* */
+        /* check scores for end of game result */
+        /************************************* */
+
         if (playerScore > computerScore) {
             console.log(`You win! P: ${playerScore} C: ${computerScore}`);
         }
@@ -79,6 +89,11 @@ function game() {
             console.log(`Draw! -- P: ${playerScore} C: ${computerScore}`);
         }
         
+
+        /********************************************************** */
+        /* ask if player wants to play again and restart game if so */
+        /********************************************************** */
+
         let continuePlaying = prompt("Want to play again? Enter: Y/N.");
         
         if (continuePlaying === 'N' ){
