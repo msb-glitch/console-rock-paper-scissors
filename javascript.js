@@ -8,11 +8,6 @@ function getComputerChoice() {
 }
 
 
-
-
-
-
-
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
@@ -37,11 +32,12 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    /* game() function = 
-        play 5 rounds of RPS
-        keep score
-        declare winner
-        ask to play again at end of round
+
+    /*  game() function = 
+            play 5 rounds of RPS
+            keep score
+            declare winner
+            ask to play again at end of round
     */
 
     let wantToPlay = true; //only play if player wants to play; assume true at start
