@@ -63,8 +63,10 @@ function game() {
                 computerScore += 1;
             }
             else { } // draw
-            console.log(`P: ${playerSelection}\tC: ${computerSelection}`);
-            console.log(`Player score: ${playerScore}\nComputer score: ${computerScore}`);
+
+            console.log(`P: ${playerSelection}\tC: ${computerSelection}`); // print player and computer selections
+            
+            console.log(`Player score: ${playerScore}\nComputer score: ${computerScore}`); // print player and computer scores
         }
 
         if (playerScore > computerScore) {
