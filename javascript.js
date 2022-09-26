@@ -10,9 +10,7 @@ function getComputerChoice() {
 
 
 const computerSelection = getComputerChoice();
-console.log(computerSelection);
 const playerSelection = prompt("Please choose: Rock, Paper, Scissors");
-console.log(`Player = ${playerSelection}; Computer = ${computerSelection}`);
 
 
 function playRound(playerSelection, computerSelection) {
