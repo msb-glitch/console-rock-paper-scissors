@@ -3,10 +3,14 @@ const playerButton = document.querySelectorAll('button');
 
 let computerSelection = getComputerChoice();
 let playerSelection = '';
+
+/***************************
+ * Button listeners
+ ***************************/
 playerButton.forEach(button => {
     button.addEventListener('click', () => {
         playerSelection = button.getAttribute('id');
-        console.log(playerSelection);
+        console.log(playRound(playerSelection,getComputerChoice()));
     });
     
 })
