@@ -1,4 +1,19 @@
 const choices = ["Rock", "Paper", "Scissors"]
+const playerButton = document.querySelectorAll('button');
+
+let computerSelection = getComputerChoice();
+let playerSelection = '';
+playerButton.forEach(button => {
+    button.addEventListener('click', () => {
+        playerSelection = button.getAttribute('id');
+        console.log(playerSelection);
+    });
+    
+})
+
+
+
+
 
 function getComputerChoice() {
     /* Function to Get Computer's Choice of Rock, Paper, or Scissors */
@@ -45,64 +60,7 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
-    while (wantToPlay) {
 
-        /********************** */
-        /*play X rounds of game */
-        /********************** */
-        
-        
-            const computerSelection = getComputerChoice();
-            const playerSelection = prompt("Please choose: Rock, Paper, Scissors");
-
-            let gameResult = playRound(playerSelection, computerSelection);
-
-            if (gameResult === 'player') { // player wins
-                playerScore += 1;
-            }
-            else if (gameResult === 'computer') { // computer wins
-                computerScore += 1;
-            }
-            else { } // draw
-
-            console.log(`P: ${playerSelection}\tC: ${computerSelection}`); // print player and computer selections
-            
-            console.log(`Player score: ${playerScore}\nComputer score: ${computerScore}`); // print player and computer scores
-        
-
-
-        /************************************* */
-        /* check scores for end of game result */
-        /************************************* */
-
-        if (playerScore > computerScore) {
-            console.log(`You win! P: ${playerScore} C: ${computerScore}`);
-        }
-        else if (playerScore < computerScore) {
-            console.log(`You lose... P: ${playerScore} C: ${computerScore}`);
-        }
-        else {
-            console.log(`Draw! -- P: ${playerScore} C: ${computerScore}`);
-        }
-        
-
-        /********************************************************** */
-        /* ask if player wants to play again and restart game if so */
-        /********************************************************** */
-
-        let continuePlaying = prompt("Want to play again? Enter: Y/N.");
-        
-        if (continuePlaying === 'N' ){
-            wantToPlay = false;
-        }
-
-        else { // reset round count and scores to play again
-            roundNumber = 1;
-            playerScore = 0;
-            computerScore = 0;
-        };
-        
-    }
 
 }
 
