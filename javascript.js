@@ -48,10 +48,10 @@ function game() {
     while (wantToPlay) {
 
         /********************** */
-        /*play 5 rounds of game */
+        /*play X rounds of game */
         /********************** */
         
-        for (roundNumber; roundNumber <= 5; roundNumber++) {
+        
             const computerSelection = getComputerChoice();
             const playerSelection = prompt("Please choose: Rock, Paper, Scissors");
 
@@ -68,7 +68,7 @@ function game() {
             console.log(`P: ${playerSelection}\tC: ${computerSelection}`); // print player and computer selections
             
             console.log(`Player score: ${playerScore}\nComputer score: ${computerScore}`); // print player and computer scores
-        }
+        
 
 
         /************************************* */
