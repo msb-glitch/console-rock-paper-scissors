@@ -4,35 +4,34 @@ const roundNumber = document.querySelector('.roundcount .number');
 const playerChose = document.querySelector('.playerchose i')
 const computerChose = document.querySelector('.computerchose i')
 const roundResult = document.querySelector('.roundresult')
+const paperClass = 'fa-regular fa-hand';
+const rockClass = 'fa-regular fa-hand-back-fist';
+const scissorsClass = 'fa-regular fa-hand-scissors';
+const displayedPlayerScore = document.querySelector('.playerscore .number');
+const displayedComputerScore = document.querySelector('.computerscore .number');
 
+let playerScore = 0;
+let computerScore = 0;
 
-
-
-let computerSelection = '';
-let playerSelection = '';
-
-/***************************
- * Button listeners
- ***************************/
-playerButton.forEach(button => {
-    button.addEventListener('click', () => {
-        playerSelection = button.getAttribute('id');
-        let chosenClass = button.firstChild.getAttribute('class');
-        playerChose.setAttribute('class', chosenClass);
-        
-        console.log(playRound(playerSelection,getComputerChoice()));
-    });
-    
-});
-
-
-
-
+displayedPlayerScore.textContent = playerScore;
+displayedComputerScore.textContent = computerScore;
 
 function getComputerChoice() {
     /* Function to Get Computer's Choice of Rock, Paper, or Scissors */
 
     let computerChoice = Math.floor(Math.random() * choices.length); //get random number between 0 and length of choices array
+    switch (computerChoice) {
+        case 0:
+            computerChose.setAttribute('class', rockClass);
+            break;
+        case 1:
+            computerChose.setAttribute('class', paperClass);
+            break;
+        case 2:
+            computerChose.setAttribute('class', scissorsClass);
+            break;
+    }
+
     return choices[computerChoice];
 }
 
@@ -44,7 +43,8 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === computerSelection) { // Draw conditions: player selection === computer selection
         result = 'draw';
-        roundResult.textContent='It\'s a tie!';
+        updateScore();
+        roundResult.textContent = 'It\'s a tie!';
     }
 
     else if ((playerSelection === 'rock' && computerSelection === 'paper') ||  // Losing conditions: computer beats paper
@@ -52,18 +52,26 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === 'paper' && computerSelection === 'scissors')) {
 
         result = 'computer';
-        roundResult.textContent='The computer wins this round...';
+        computerScore++;
+        updateScore();
+        roundResult.textContent = 'The computer wins this round...';
 
     }
 
     else { // Win conditions
         result = 'player';
+        playerScore++;
+        updateScore();
         roundResult.textContent = 'You won the round!';
     }
 
     return result;
 }
 
+function updateScore(){
+    displayedPlayerScore.textContent = playerScore;
+    displayedComputerScore.textContent = computerScore;
+}
 function game() {
 
     /*  game() function = 
@@ -74,11 +82,28 @@ function game() {
     */
 
     let wantToPlay = true; //only play if player wants to play; assume true at start
-    let roundNumber = 1;
-    let playerScore = 0;
-    let computerScore = 0;
+    let currentRound = 1;
 
 
+
+    let computerSelection = '';
+    let playerSelection = '';
+    /***************************
+     *  Button listeners
+     ***************************/
+    playerButton.forEach(button => {
+        button.addEventListener('click', () => {
+            roundNumber.textContent = currentRound;
+            playerSelection = button.getAttribute('id');
+            let chosenClass = button.firstChild.getAttribute('class');
+            playerChose.setAttribute('class', chosenClass);
+            playRound(playerSelection, getComputerChoice());
+            currentRound++;
+
+
+        });
+
+    });
 
 }
 

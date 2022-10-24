@@ -54,9 +54,13 @@ body {
     width: 34%;
 
 }
+.playerselection .playerchoice i:hover{
+    color: red;
+}
 .playerselection .playerchoice i{
-    font-size: 3em;
-    padding: 1em;
+    font-size: 5em;
+    padding: .5em;
+    cursor:pointer;
 
 }
 .playarea{
