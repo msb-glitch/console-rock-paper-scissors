@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #333;
+    color: white;
+    
+}
+
+.header {
+    display: flex;
+
+    justify-content: center;
+}
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.score{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.score .playerscore, .score .computerscore{
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.playerselection{
+    display: flex;
+    flex-direction: column;
+    
+    border:1px solid red;
+    width: 34%;
+
+}
+.playarea{
+    border: 1px solid green;
+    width: 66%;
+}

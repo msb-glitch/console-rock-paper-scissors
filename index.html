@@ -6,16 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors UI</title>
-
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a807d6576a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="selectionbuttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <div class="header">
+        <h1>Rock, Paper, Scissors</h1>
     </div>
-    <div class="scoreboard"></div>
+    <div class="scoreboard">
+        <h2>Scoreboard</h2>
+        <div class="score">
+            <div class="playerscore">
+                Player: <div class="number">0</div>
+            </div>
+            <div class="computerscore">
+                Computer: <div class="number">0</div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="playerselection">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div class="playarea">
+
+        </div>
+    </div>
+
 </body>
 <script src="javascript.js"></script>
 
