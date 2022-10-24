@@ -70,12 +70,29 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
-function updateScore(){
+function updateScore() {
     displayedPlayerScore.textContent = playerScore;
     displayedComputerScore.textContent = computerScore;
 }
-function gameOver(){
+function gameOver() {
     // document.location.reload();
+
+    /********************
+     * Display winner
+     *******************/
+    if (computerScore > playerScore) {
+        document.querySelector('.scoreboard h2').textContent = 'The computer won this time...';
+        document.querySelector('#paper').setAttribute('style','pointer-events:none'); //replace with foreach
+    }
+    else if(playerScore > computerScore){
+        document.querySelector('.scoreboard h2').textContent = 'You win!!!';
+        document.querySelector('#paper').setAttribute('style','pointer-events:none');
+    }
+    else{
+        document.querySelector('.scoreboard h2').textContent = 'It\'s a draw.';
+        document.querySelector('#paper').setAttribute('style','pointer-events:none');
+    }
+
 }
 
 function game() {
@@ -105,7 +122,7 @@ function game() {
             playerChose.setAttribute('class', chosenClass);
             playRound(playerSelection, getComputerChoice());
             currentRound++;
-            if (currentRound >= 6){
+            if (currentRound >= 6) {
                 gameOver();
             }
 
