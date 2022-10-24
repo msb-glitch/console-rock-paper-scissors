@@ -9,6 +9,8 @@ const rockClass = 'fa-regular fa-hand-back-fist';
 const scissorsClass = 'fa-regular fa-hand-scissors';
 const displayedPlayerScore = document.querySelector('.playerscore .number');
 const displayedComputerScore = document.querySelector('.computerscore .number');
+const scoreboard = document.querySelector('.scoreboard');
+
 
 let playerScore = 0;
 let computerScore = 0;
@@ -72,6 +74,10 @@ function updateScore(){
     displayedPlayerScore.textContent = playerScore;
     displayedComputerScore.textContent = computerScore;
 }
+function gameOver(){
+    // document.location.reload();
+}
+
 function game() {
 
     /*  game() function = 
@@ -99,7 +105,9 @@ function game() {
             playerChose.setAttribute('class', chosenClass);
             playRound(playerSelection, getComputerChoice());
             currentRound++;
-
+            if (currentRound >= 6){
+                gameOver();
+            }
 
         });
 
