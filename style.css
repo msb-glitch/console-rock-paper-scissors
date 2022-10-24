@@ -33,6 +33,9 @@ body {
     flex-direction: row;
     margin: 2em;
 }
+.score .number{
+    padding-left: 8px;
+}
 .content {
     display: flex;
     justify-content: space-between;
@@ -41,9 +44,14 @@ body {
 .playerselection{
     display: flex;
     flex-direction: column;
-    
+    align-items:center;
     border:1px solid red;
     width: 34%;
+
+}
+.playerselection .playerchoice i{
+    font-size: 3em;
+    padding: 1em;
 
 }
 .playarea{

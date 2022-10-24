@@ -1,7 +1,14 @@
 const choices = ["Rock", "Paper", "Scissors"]
-const playerButton = document.querySelectorAll('button');
+const playerButton = document.querySelectorAll('.playerselection .playerchoice');
+const roundNumber = document.querySelector('.roundcount .number');
+const playerChose = document.querySelector('.playerchose i')
+const computerChose = document.querySelector('.computerchose i')
+const roundResult = document.querySelector('.roundresult')
 
-let computerSelection = getComputerChoice();
+
+
+
+let computerSelection = '';
 let playerSelection = '';
 
 /***************************
@@ -10,10 +17,13 @@ let playerSelection = '';
 playerButton.forEach(button => {
     button.addEventListener('click', () => {
         playerSelection = button.getAttribute('id');
+        let chosenClass = button.firstChild.getAttribute('class');
+        playerChose.setAttribute('class', chosenClass);
+        
         console.log(playRound(playerSelection,getComputerChoice()));
     });
     
-})
+});
 
 
 
@@ -34,6 +44,7 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === computerSelection) { // Draw conditions: player selection === computer selection
         result = 'draw';
+        roundResult.textContent='It\'s a tie!';
     }
 
     else if ((playerSelection === 'rock' && computerSelection === 'paper') ||  // Losing conditions: computer beats paper
@@ -41,12 +52,15 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === 'paper' && computerSelection === 'scissors')) {
 
         result = 'computer';
+        roundResult.textContent='The computer wins this round...';
 
     }
 
     else { // Win conditions
         result = 'player';
+        roundResult.textContent = 'You won the round!';
     }
+
     return result;
 }
 
