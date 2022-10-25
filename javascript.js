@@ -82,17 +82,19 @@ function gameOver() {
      *******************/
     if (computerScore > playerScore) {
         document.querySelector('.scoreboard h2').textContent = 'The computer won this time...';
-        document.querySelector('#paper').setAttribute('style','pointer-events:none'); //replace with foreach
+       
     }
-    else if(playerScore > computerScore){
+    else if (playerScore > computerScore) {
         document.querySelector('.scoreboard h2').textContent = 'You win!!!';
-        document.querySelector('#paper').setAttribute('style','pointer-events:none');
+        
     }
-    else{
+    else {
         document.querySelector('.scoreboard h2').textContent = 'It\'s a draw.';
-        document.querySelector('#paper').setAttribute('style','pointer-events:none');
+        
     }
-
+    playerButton.forEach(button => {
+        button.setAttribute('style', 'pointer-events:none');
+    })
 }
 
 function game() {

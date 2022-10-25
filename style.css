@@ -22,7 +22,8 @@ body {
 }
 
 .header h1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Silkscreen', cursive;
+    font-size: 34pt;
     padding-top: 20px;
     padding-bottom: 40px;
     color: #eee;
@@ -30,11 +31,11 @@ body {
         0 0 7px #fff,
         0 0 10px #fff,
         0 0 21px #fff,
-        0 0 42px #f09,
-        0 0 82px #f09,
-        0 0 92px #f09,
-        0 0 102px #f09,
-        0 0 151px #f09;
+        0 0 42px #eeff00,
+        0 0 82px #eeff00,
+        0 0 92px #eeff00,
+        0 0 102px #eeff00,
+        0 0 151px #eeff00;
 }
 
 .scoreboard {
@@ -109,7 +110,9 @@ body {
 }
 
 .playarea {
-    
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 56%;
     border: 0rem solid white;
     border-radius: 2rem;
@@ -122,5 +125,36 @@ body {
     
     margin: 0 40px;
     padding: 20px;
+
+}
+
+.roundcount{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family:'Silkscreen';
+    font-size: 24pt;
+    color: #eeff00
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Silkscreen';
+}
+.playerchose i, .computerchose i{
+    font-size: 20em;
+    margin-top: 30px;
+}
+.bottom{
+    display:flex;
+    justify-content: center;
+    font-family:'Silkscreen';
+}
+
+.loser{
+color: #999;
+}
+.winner{
 
 }
