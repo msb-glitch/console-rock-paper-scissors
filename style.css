@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Wallpoet&display=swap');
 
 
 
@@ -42,6 +42,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Silkscreen';
 }
 
 .score {
@@ -63,9 +64,12 @@ body {
 
 .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    
 }
-
+.playerselection h3{
+    font-family:'Silkscreen';
+}
 .playerselection {
     display: flex;
     flex-direction: column;
@@ -78,8 +82,8 @@ body {
         0 0 0.8rem #f09,
         0 0 2.8rem #f09,
         inset 0 0 1.3rem #f09;
-    width: 34%;
-    margin: 40px;
+    width: 24%;
+    margin: 0 40px;
     padding: 20px;
 
 }
@@ -106,7 +110,7 @@ body {
 
 .playarea {
     
-    width: 66%;
+    width: 56%;
     border: 0rem solid white;
     border-radius: 2rem;
     box-shadow: 0 0 .2rem #fff,
@@ -116,7 +120,7 @@ body {
         0 0 2.8rem #00a2ff,
         inset 0 0 1.3rem #00a2ff;
     
-    margin: 40px;
+    margin: 0 40px;
     padding: 20px;
 
 }
