@@ -47,6 +47,7 @@ function playRound(playerSelection, computerSelection) {
         result = 'draw';
         updateScore();
         roundResult.textContent = 'It\'s a tie!';
+        
     }
 
     else if ((playerSelection === 'rock' && computerSelection === 'paper') ||  // Losing conditions: computer beats paper
@@ -57,7 +58,8 @@ function playRound(playerSelection, computerSelection) {
         computerScore++;
         updateScore();
         roundResult.textContent = 'The computer wins this round...';
-
+        computerChose.classList.toggle('winner');
+        playerChose.classList.toggle('loser');
     }
 
     else { // Win conditions
@@ -65,6 +67,8 @@ function playRound(playerSelection, computerSelection) {
         playerScore++;
         updateScore();
         roundResult.textContent = 'You won the round!';
+        computerChose.classList.toggle('loser');
+        playerChose.classList.toggle('winner');
     }
 
     return result;
