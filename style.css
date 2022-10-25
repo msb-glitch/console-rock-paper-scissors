@@ -24,18 +24,9 @@ body {
 .header h1 {
     font-family: 'Silkscreen', cursive;
     font-size: 34pt;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    
     color: #eee;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #eeff00,
-        0 0 82px #eeff00,
-        0 0 92px #eeff00,
-        0 0 102px #eeff00,
-        0 0 151px #eeff00;
+    
 }
 
 .scoreboard {
@@ -91,6 +82,17 @@ body {
 
 }
 
+.playerselection .playerchoice i {
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #eeff00,
+        0 0 82px #eeff00,
+        0 0 92px #eeff00,
+        0 0 102px #eeff00,
+        0 0 151px #eeff00;
+}
 .playerselection .playerchoice i:hover {
     color: white;
     text-shadow:
@@ -198,13 +200,5 @@ body {
 .disabled{
     pointer-events: none;
     opacity: 0.3;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #eeff00,
-        0 0 82px #eeff00,
-        0 0 92px #eeff00,
-        0 0 102px #eeff00,
-        0 0 151px #eeff00;
+    
 }
