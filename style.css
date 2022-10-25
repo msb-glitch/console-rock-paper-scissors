@@ -13,57 +13,110 @@ body {
     margin: 0;
     background-color: #333;
     color: white;
-    
+
 }
 
 .header {
     display: flex;
-
     justify-content: center;
-    font-family: 'Press Start 2P', cursive;
 }
-.scoreboard{
+
+.header h1 {
+    font-family: 'Press Start 2P', cursive;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: #eee;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #f09,
+        0 0 82px #f09,
+        0 0 92px #f09,
+        0 0 102px #f09,
+        0 0 151px #f09;
+}
+
+.scoreboard {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
-.score{
+
+.score {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.score .playerscore, .score .computerscore{
+
+.score .playerscore,
+.score .computerscore {
     display: flex;
     flex-direction: row;
     margin: 2em;
 }
-.score .number{
+
+.score .number {
     padding-left: 8px;
 }
+
 .content {
     display: flex;
     justify-content: space-between;
 }
 
-.playerselection{
+.playerselection {
     display: flex;
     flex-direction: column;
-    align-items:center;
-    border:1px solid red;
+    align-items: center;
+    border: 0rem solid white;
+    border-radius: 2rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #f09,
+        0 0 0.8rem #f09,
+        0 0 2.8rem #f09,
+        inset 0 0 1.3rem #f09;
     width: 34%;
+    margin: 40px;
+    padding: 20px;
 
 }
-.playerselection .playerchoice i:hover{
-    color: red;
+
+.playerselection .playerchoice i:hover {
+    color: white;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #49f76e,
+        0 0 82px #49f76e,
+        0 0 92px #49f76e,
+        0 0 102px #49f76e,
+        0 0 151px #49f76e;
 }
-.playerselection .playerchoice i{
+
+.playerselection .playerchoice i {
     font-size: 5em;
     padding: .5em;
-    cursor:pointer;
+    cursor: pointer;
 
 }
-.playarea{
-    border: 1px solid green;
+
+.playarea {
+    
     width: 66%;
+    border: 0rem solid white;
+    border-radius: 2rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #00a2ff,
+        0 0 0.8rem #00a2ff,
+        0 0 2.8rem #00a2ff,
+        inset 0 0 1.3rem #00a2ff;
+    
+    margin: 40px;
+    padding: 20px;
+
 }
