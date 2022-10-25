@@ -47,7 +47,8 @@ function playRound(playerSelection, computerSelection) {
         result = 'draw';
         updateScore();
         roundResult.textContent = 'It\'s a tie!';
-        
+        computerChose.classList.toggle('tie');
+        playerChose.classList.toggle('tie');
     }
 
     else if ((playerSelection === 'rock' && computerSelection === 'paper') ||  // Losing conditions: computer beats paper
@@ -81,9 +82,7 @@ function updateScore() {
 function gameOver() {
     // document.location.reload();
 
-    /********************
-     * Display winner
-     *******************/
+    //display winner
     if (computerScore > playerScore) {
         document.querySelector('.scoreboard h2').textContent = 'The computer won this time...';
        
@@ -96,8 +95,10 @@ function gameOver() {
         document.querySelector('.scoreboard h2').textContent = 'It\'s a draw.';
         
     }
+
+    //disable player choices
     playerButton.forEach(button => {
-        button.setAttribute('style', 'pointer-events:none');
+        button.classList.toggle('disabled')
     })
 }
 
@@ -110,13 +111,10 @@ function game() {
             ask to play again at end of round
     */
 
-    let wantToPlay = true; //only play if player wants to play; assume true at start
+
     let currentRound = 1;
-
-
-
-    let computerSelection = '';
     let playerSelection = '';
+    
     /***************************
      *  Button listeners
      ***************************/
