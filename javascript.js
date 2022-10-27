@@ -19,7 +19,7 @@ displayedPlayerScore.textContent = playerScore;
 displayedComputerScore.textContent = computerScore;
 
 function getComputerChoice() {
-    /* Function to Get Computer's Choice of Rock, Paper, or Scissors */
+    
 
     let computerChoice = Math.floor(Math.random() * choices.length); //get random number between 0 and length of choices array
     switch (computerChoice) {
@@ -80,7 +80,8 @@ function updateScore() {
     displayedComputerScore.textContent = computerScore;
 }
 function gameOver() {
-    // document.location.reload();
+    // to do: add reset button document.location.reload();
+    // to do: add smiley face or frowny face when win or lose
 
     //display winner
     if (computerScore > playerScore) {
@@ -108,6 +109,8 @@ function game() {
             play 5 rounds of RPS
             keep score
             declare winner
+            
+            todo:
             ask to play again at end of round
     */
 
