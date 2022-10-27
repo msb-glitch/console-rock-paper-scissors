@@ -96,14 +96,17 @@ function gameOver() {
     }
     else {
         document.querySelector('.scoreboard h2').textContent = 'It\'s a draw.';
-        document.querySelector('.middle').innerHTML = '<i class="fa-brands fa-black-tie nowinner"></i>';
+        document.querySelector('.middle').innerHTML = '<i class="fa-regular fa-flag nowinner"></i>';
 
     }
 
     //disable player choices
     playerButton.forEach(button => {
         button.classList.toggle('disabled')
-    })
+    });
+
+    document.querySelector('.top').innerHTML = '';
+    document.querySelector('.bottom').innerHTML = '';
 }
 
 function game() {
