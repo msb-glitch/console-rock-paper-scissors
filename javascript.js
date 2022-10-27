@@ -105,6 +105,8 @@ function gameOver() {
         button.classList.toggle('disabled')
     });
 
+    document.querySelector('.playerselection h3').classList.toggle('disabled');
+
     document.querySelector('.top').innerHTML = '';
     document.querySelector('.bottom').innerHTML = '';
 }
