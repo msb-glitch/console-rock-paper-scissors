@@ -22,6 +22,8 @@ function getComputerChoice() {
     
 
     let computerChoice = Math.floor(Math.random() * choices.length); //get random number between 0 and length of choices array
+    
+    //adds font-awesome icon to computer choice area (.computerchoice i)
     switch (computerChoice) {
         case 0:
             computerChose.setAttribute('class', rockClass);
