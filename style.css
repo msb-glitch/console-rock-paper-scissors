@@ -270,7 +270,7 @@ body {
         background-color: green;
     }
     .header h1{
-        font-size: 2em;
+        font-size: 1.6em;
     }
     .playerchose i,
     .computerchose i,
@@ -290,7 +290,7 @@ body {
 }
 
 /* Extra Small Devices, Phones */
-@media (max-width : 480px) {
+@media (max-width : 530px) {
     body {
         background-color: red;
     }
