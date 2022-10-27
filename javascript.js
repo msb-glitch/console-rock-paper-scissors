@@ -81,7 +81,7 @@ function updateScore() {
 }
 function gameOver() {
     // to do: add reset button document.location.reload();
-    // to do: add smiley face or frowny face when win or lose
+    
 
     //display winner
     if (computerScore > playerScore) {

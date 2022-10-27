@@ -76,7 +76,7 @@ body {
         0 0 0.8rem #f09,
         0 0 2.8rem #f09,
         inset 0 0 1.3rem #f09;
-    width: 24%;
+    flex-grow: 1;
     margin: 0 40px;
     padding: 20px;
 
@@ -118,7 +118,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 56%;
+    flex-grow: 3;
     border: 0rem solid white;
     border-radius: 2rem;
     box-shadow: 0 0 .2rem #fff,
@@ -150,9 +150,12 @@ body {
 }
 
 .playerchose i,
-.computerchose i {
+.computerchose i,
+.computerwin,
+.playerwin,
+.nowinner {
     font-size: 20em;
-    margin-top: 30px;
+
 }
 
 .bottom {
@@ -198,12 +201,7 @@ body {
         0 0 151px #eeff00;
 }
 
-.computerwin,
-.playerwin,
-.nowinner {
-    font-size: 20em;
-    margin-top: 30px;
-}
+
 
 .computerwin {
     text-shadow:
@@ -246,3 +244,69 @@ body {
     opacity: 0.3;
 
 }
+/* Large Devices, Wide Screens */
+@media (max-width : 1200px) {
+   
+    
+}
+/* Medium Devices, Desktops */
+@media (max-width : 992px) {
+    body {
+        background-color: blue;
+    }
+    .playerchose i,
+    .computerchose i,
+    .computerwin,
+    .playerwin,
+    .nowinner {
+        font-size: 16em;
+
+    }
+
+}
+/* Small Devices, Tablets */
+@media (max-width : 768px) {
+    body {
+        background-color: green;
+    }
+    .header h1{
+        font-size: 2em;
+    }
+    .playerchose i,
+    .computerchose i,
+    .computerwin,
+    .playerwin,
+    .nowinner {
+        font-size: 14em;
+
+    }
+    .content{
+        flex-direction:column;
+        
+    }
+    .playerselection{
+        flex-direction: row;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media (max-width : 480px) {
+    body {
+        background-color: red;
+    }
+    .header h1{
+        font-size: 1.4em;
+    }
+    .playerchose i,
+    .computerchose i,
+    .computerwin,
+    .playerwin,
+    .nowinner {
+        font-size: 10em;
+
+    }
+}
+
+
+
+
