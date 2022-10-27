@@ -19,10 +19,8 @@ displayedPlayerScore.textContent = playerScore;
 displayedComputerScore.textContent = computerScore;
 
 function getComputerChoice() {
-    
-
     let computerChoice = Math.floor(Math.random() * choices.length); //get random number between 0 and length of choices array
-    
+
     //adds font-awesome icon to computer choice area (.computerchoice i)
     switch (computerChoice) {
         case 0:
@@ -88,15 +86,18 @@ function gameOver() {
     //display winner
     if (computerScore > playerScore) {
         document.querySelector('.scoreboard h2').textContent = 'The computer won this time...';
-       
+        document.querySelector('.middle').innerHTML = '<i class="fa-regular fa-face-frown computerwin"></i>';
+
     }
     else if (playerScore > computerScore) {
         document.querySelector('.scoreboard h2').textContent = 'You win!!!';
-        
+        document.querySelector('.middle').innerHTML = '<i class="fa-regular fa-face-smile playerwin"></i>';
+
     }
     else {
         document.querySelector('.scoreboard h2').textContent = 'It\'s a draw.';
-        
+        document.querySelector('.middle').innerHTML = '<i class="fa-brands fa-black-tie nowinner"></i>';
+
     }
 
     //disable player choices
@@ -119,7 +120,7 @@ function game() {
 
     let currentRound = 1;
     let playerSelection = '';
-    
+
     /***************************
      *  Button listeners
      ***************************/
