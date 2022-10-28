@@ -1,4 +1,4 @@
-# console-rock-paper-scissors
+# rps-ui
 Revisiting Rock, Paper, Scissors game for TheOdinProject
 
 Link: [hhttps://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
