@@ -80,9 +80,6 @@ function updateScore() {
     displayedComputerScore.textContent = computerScore;
 }
 function gameOver() {
-    // to do: add reset button document.location.reload();
-    
-
     //display winner
     if (computerScore > playerScore) {
         document.querySelector('.scoreboard h2').textContent = 'The computer won this time...';
@@ -108,7 +105,11 @@ function gameOver() {
     document.querySelector('.playerselection h3').classList.toggle('disabled');
 
     document.querySelector('.top').innerHTML = '';
-    document.querySelector('.bottom').innerHTML = '';
+    document.querySelector('.playarea').classList.toggle('playagain');
+    document.querySelector('.bottom').innerHTML = 'Click to play again';
+    document.querySelector('.playagain').addEventListener('click', () => {
+        document.location.reload();
+    });
 }
 
 function game() {
@@ -117,9 +118,7 @@ function game() {
             play 5 rounds of RPS
             keep score
             declare winner
-            
-            todo:
-            ask to play again at end of round
+            ask to play again
     */
 
 

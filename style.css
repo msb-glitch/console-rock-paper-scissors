@@ -249,6 +249,9 @@ body {
     opacity: 0.3;
 
 }
+.playagain{
+    cursor: pointer;
+}
 /* Large Devices, Wide Screens */
 @media (max-width : 1200px) {
     .playerchose i,
