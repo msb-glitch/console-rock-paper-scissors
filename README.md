@@ -1,9 +1,13 @@
 # console-rock-paper-scissors
-Console Rock, Paper, Scissors game for TheOdinProject
+Revisiting Rock, Paper, Scissors game for TheOdinProject
 
-Link: [https://www.theodinproject.com/lessons/foundations-rock-paper-scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
+Link: [hhttps://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
 
-"We’re going to make a simple implementation of grade-school classic 'rock paper scissors'."
+Updating console Rock, Paper, Scissors game to have a graphical UI powered by javascript. 
 
 
-Neon icon effect idea from: https://css-tricks.com/how-to-create-neon-text-with-css/
+Neon icon effect idea from: [https://css-tricks.com/how-to-create-neon-text-with-css/](https://css-tricks.com/how-to-create-neon-text-with-css/)
+
+Icons from: [Font Awesome](https://fontawesome.com/)
+
+Font from: [Google Fonts](https://fonts.google.com/)
