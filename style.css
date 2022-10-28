@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Wallpoet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700');
 
 
 
@@ -13,7 +13,7 @@ body {
     margin: 0;
     background-color: #333;
     color: white;
-
+    font-family: 'Silkscreen', cursive;
 }
 
 .header {
@@ -22,7 +22,7 @@ body {
 }
 
 .header h1 {
-    font-family: 'Silkscreen', cursive;
+    
     font-size: 34pt;
 
     color: #eee;
@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Silkscreen';
+    
 }
 
 .score {
@@ -61,7 +61,7 @@ body {
 }
 
 .playerselection .heading {
-    font-family: 'Silkscreen';
+    
     text-align: center;
 }
 
@@ -138,7 +138,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: 'Silkscreen';
+    
     font-size: 24pt;
     color: #eeff00
 }
@@ -147,7 +147,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-family: 'Silkscreen';
+    
 }
 
 .playerchose i,
@@ -166,7 +166,7 @@ body {
 .bottom {
     display: flex;
     justify-content: center;
-    font-family: 'Silkscreen';
+    
 }
 
 .loser {
