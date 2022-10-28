@@ -60,8 +60,9 @@ body {
 
 }
 
-.playerselection h3 {
+.playerselection .heading {
     font-family: 'Silkscreen';
+    text-align: center;
 }
 
 .playerselection {
@@ -154,10 +155,14 @@ body {
 .computerwin,
 .playerwin,
 .nowinner {
-    font-size: 20em;
+    font-size: 18em;
+    margin-top: 20px;
 
 }
-
+.playerchose, .computerchose{
+    text-align: center;
+    
+}
 .bottom {
     display: flex;
     justify-content: center;
@@ -246,7 +251,14 @@ body {
 }
 /* Large Devices, Wide Screens */
 @media (max-width : 1200px) {
-   
+    .playerchose i,
+    .computerchose i,
+    .computerwin,
+    .playerwin,
+    .nowinner {
+        font-size: 16em;
+
+    }
     
 }
 /* Medium Devices, Desktops */
@@ -259,8 +271,11 @@ body {
     .computerwin,
     .playerwin,
     .nowinner {
-        font-size: 16em;
+        font-size: 12em;
 
+    }
+    .header h1{
+        font-size: 2.2em;
     }
 
 }
@@ -278,7 +293,7 @@ body {
     .computerwin,
     .playerwin,
     .nowinner {
-        font-size: 14em;
+        font-size: 12em;
 
     }
     .content{
@@ -292,6 +307,7 @@ body {
     }
     .playerselection .heading{
      flex: 0 1 100%;
+     
     }
     .playerselection .playerchoice{
         flex: 1 0 33%;
@@ -302,7 +318,7 @@ body {
 }
 
 /* Extra Small Devices, Phones */
-@media (max-width : 530px) {
+@media (max-width : 548px) {
     body {
         background-color: red;
     }
